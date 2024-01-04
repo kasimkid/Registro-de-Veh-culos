@@ -1,9 +1,7 @@
 import React from 'react'
 
-const Vehiculos = () => {
+export const Vehiculos = () => {
   return (
-    <div>Vehiculos</div>
+    <h1>Vehículos</h1>
   )
 }
-
-export default Vehiculos

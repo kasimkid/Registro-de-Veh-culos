@@ -3,7 +3,7 @@ import { Home } from "../views/Home"
 import { NuevoIngreso } from "../views/NuevoIngreso"
 import { Vehiculos } from "../views/Vehiculos"
 
-export const routes = () => {
+export const MyRoutes = () => {
   return (
     
     <BrowserRouter>
@@ -17,4 +17,3 @@ export const routes = () => {
     
   )
 }
-clear
