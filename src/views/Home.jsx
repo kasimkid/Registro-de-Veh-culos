@@ -1,10 +1,15 @@
 import React from "react";
+import { Login } from "../components/Login";
 
 
 export const Home= () => {
+
+
+
+
   return (
     <>
-      <h1>Login</h1>
+      <Login />
     </>
   );
 };
