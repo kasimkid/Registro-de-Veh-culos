@@ -1,11 +1,10 @@
 import React from "react";
-import { Home } from "./views/Home";
+import { MyRoutes } from "./routes/routes";
 
 function App() {
   return (
     <>
-      <h1>Registro de Vehiculos</h1>
-      <Home />
+      <MyRoutes/>
     </>
   );
 }

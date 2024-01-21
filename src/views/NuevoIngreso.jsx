@@ -1,9 +1,7 @@
 import React from 'react'
 
-const NuevoIngreso = () => {
+export const NuevoIngreso = () => {
   return (
-    <div>NuevoIngreso</div>
+    <h1>NuevoIngreso</h1>
   )
 }
-
-export default NuevoIngreso
