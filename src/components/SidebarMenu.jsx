@@ -5,7 +5,7 @@ const SidebarMenu = () => {
   
     <>
     
-      
+      <h1>Sidebar</h1>
        
     </>
   )

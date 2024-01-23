@@ -15,6 +15,7 @@ export const Login = () => {
   return (
     <>
     <h1>Inicio de Sesión</h1>
+    <div className="form-box container">
       <form className="form-control" onSubmit={onLogIn}>
         <input
           type="email"
@@ -35,9 +36,13 @@ export const Login = () => {
           value={ ''}
           onChange={onInputChange}
         />
+        <div className="btns d-flex justify-content-center mt-2 gap-2">
+        <button className="btn btn-primary outline">Ingresar</button>
+        <button className="btn btn-danger outline">Cancelar</button>
+        </div>
 
-        <button className="btn btn-primary mt-2">Ingresar</button>
       </form>
+      </div>
     </>
   );
 };
