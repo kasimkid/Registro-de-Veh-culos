@@ -15,7 +15,7 @@ export const Login = () => {
   return (
     <>
     <h1>Inicio de Sesión</h1>
-    <div className="form-box">
+    <div className="form-box container">
       <form className="form-control" onSubmit={onLogIn}>
         <input
           type="email"
