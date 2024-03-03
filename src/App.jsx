@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { MyRoutes } from "./router/routes";
-export const ThemeContext = React.createContext(null)
-
+import { Ligth, Dark } from "./styles/Themes";
+import { BrowserRouter } from "react-router-dom";
+import SidebarMenu from "./components/SidebarMenu";
+export const ThemeContext = React.createContext(null);
 
 function App() {
-  const [theme, setTheme]=useState('ligth')
+  const [theme, setTheme] = useState("ligth");
 
-
+  const themeStyle = theme === "light" ? Ligth : Dark;
 
   return (
     <>
-      <MyRoutes/>
+        <BrowserRouter>
+          <SidebarMenu/>
+          <MyRoutes />
+          </BrowserRouter>
     </>
   );
 }
