@@ -1,4 +1,4 @@
-export const Ligth = {
+export const Light = {
     body: "#fff",
     text: "#202020",
     bodyRgba: "255, 255, 255",
