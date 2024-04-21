@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export const Login = () => {
   const navigate = useNavigate();
 
-  const onInputChange = (e) => {
+  const onInputChange = () => {
     console.log(onInputChange, "click");
   };
 
