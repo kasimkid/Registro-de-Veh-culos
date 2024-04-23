@@ -30,8 +30,8 @@ function App() {
                   sidebarOpen = { sidebarOpen }
                   setSidebarOpen = { setSidebarOpen }/>
                   <MyRoutes />
-              {/* <input type = 'checkbox'
-              onClick={changeTheme}></input> */}
+              <input type = 'checkbox'
+              onClick={changeTheme}></input>
             </Container>
           </BrowserRouter>
         </ThemeProvider>

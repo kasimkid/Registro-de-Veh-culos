@@ -4,7 +4,7 @@ import { v } from'../styles/Variables'
 import { AiOutlineLeft} from 'react-icons/ai'
 
 
-const SidebarMenu = ({sidebarOpen, setSidebarOpen}) => {
+ export function SidebarMenu ({sidebarOpen, setSidebarOpen})  {
 
 
 
