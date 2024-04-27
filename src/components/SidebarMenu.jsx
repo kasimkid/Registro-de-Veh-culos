@@ -7,10 +7,9 @@ import { AiOutlineLeft} from 'react-icons/ai'
  export function SidebarMenu ({sidebarOpen, setSidebarOpen})  {
 
 
-
   return (
   
-    <Container isOpen = {sidebarOpen}>
+    <Container isopen = { sidebarOpen }>
       <button className='Sidebarbutton'>
         <AiOutlineLeft/>
       </button>
@@ -53,13 +52,14 @@ padding-top:20px
     }
     cursor:pointer
     transition: all 0.3s
-    transform:${({isOpen}) => (isOpen?
+    transform:${({isopen}) => (isopen ?
     `scale(1.5)` : `scale(0.7)`)}
   }
   h2{
-    display:${ ({isOpen}) => (!isOpen ?
+    display:${ ({isopen}) => (!isopen ?
     `block` : `none`)}
   }
 }
 `
 export default SidebarMenu
+

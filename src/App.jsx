@@ -4,10 +4,10 @@ import { MyRoutes } from "./router/routes";
 import { Light, Dark } from "./styles/Themes";
 import { BrowserRouter } from "react-router-dom";
 import SidebarMenu from "./components/SidebarMenu";
-//*import { triggerFocus } from "antd/es/input/Input";//*
+// import { triggerFocus } from "antd/es/input/Input";
 export const ThemeContext = React.createContext(null);
 
-function App() {
+export function App() {
   const [theme, setTheme] = useState("light");
 
   const themeStyle = theme === "light" ? Light : Dark;
