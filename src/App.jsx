@@ -7,14 +7,14 @@ import SidebarMenu from "./components/SidebarMenu";
 // import { triggerFocus } from "antd/es/input/Input";
 export const ThemeContext = React.createContext(null);
 
-export function App() {
+function App() {
   const [theme, setTheme] = useState("light");
 
   const themeStyle = theme === "light" ? Light : Dark;
 
-  const changeTheme = () => {
-    setTheme((theme) => (theme === "light" ? "dark" : "light"));
-  };
+  // const changeTheme = () => {
+  //   setTheme((theme) => (theme === "light" ? "dark" : "light"));
+  // };
 
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
@@ -30,8 +30,8 @@ export function App() {
                   sidebarOpen = { sidebarOpen }
                   setSidebarOpen = { setSidebarOpen }/>
                   <MyRoutes />
-              <input type = 'checkbox'
-              onClick={changeTheme}></input>
+              {/* <input type = 'checkbox'
+              onClick={changeTheme}></input> */}
             </Container>
           </BrowserRouter>
         </ThemeProvider>
