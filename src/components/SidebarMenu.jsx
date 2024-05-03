@@ -3,7 +3,7 @@ import logo from '../assets/react.svg';
 import { v } from '../styles/Variables';
 import { AiOutlineLeft, AiOutlineHome } from 'react-icons/ai';
 import { MdOutlineAnalytics } from 'react-icons/md';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function SidebarMenu({ sidebarOpen, setSidebarOpen }) {
 
@@ -14,7 +14,7 @@ export function SidebarMenu({ sidebarOpen, setSidebarOpen }) {
 
     <Container isOpen={sidebarOpen}>
       <button className='Sidebarbutton'
-      onClick={openSidebar}>
+        onClick={openSidebar}>
         <AiOutlineLeft />
       </button>
       <div className='Logocontent'>
@@ -25,44 +25,39 @@ export function SidebarMenu({ sidebarOpen, setSidebarOpen }) {
           <h2>Rafael</h2>
         </div>
       </div>
-    { linksArray.map(({icon, label, to}) => (
-      <div className='LinkContainer' key= 'label'>
-        <Link to={ to }>
-          <div className='Linkicon'>
-            {icon}
-          </div>
-          {sidebarOpen &&(
-            <span>{label}</span>
-          )
-
-          }
-
-        </Link>
-
-      </div>
-
-    ))}
+      {linksArray.map(({ icon, label, to }) => (
+        <div className="LinkContainer" key={label}>
+          <Link className="Links" to={to} >
+            <div className="Linkicon">
+              {icon}
+            </div>
+            {sidebarOpen &&
+              <span>{label}</span>
+            }
+          </Link>
+        </div>
+      ))}
     </Container>
-  )
+  );
 }
 const linksArray = [
-{
-  label: 'Home',
-  icon: <AiOutlineHome/>,
-  to:'/'
-},
-{
-  label: 'Nuevo Ingreso',
-  icon: <MdOutlineAnalytics/>,
-  to:'/nuevo_ingreso'
+  {
+    label: 'Home',
+    icon: <AiOutlineHome />,
+    to: '/'
+  },
+  {
+    label: 'Nuevo Ingreso',
+    icon: <MdOutlineAnalytics />,
+    to: '/nuevo_ingreso'
 
-},
-{
-  label: 'Vehículos',
-  icon: <AiOutlineHome/>,
-  to:'/vehiculos'
+  },
+  {
+    label: 'Vehículos',
+    icon: <AiOutlineHome />,
+    to: '/vehiculos'
 
-},
+  },
 ]
 
 
@@ -72,8 +67,8 @@ const linksArray = [
 const Container = styled.div`
 color: ${(props) => props.theme.text};
 background: ${(props) => props.theme.bg};
-position:sticky;
-padding-top:10px;
+position: sticky;
+padding-top: 20px;
 
 .Sidebarbutton{
   position: absolute;
@@ -89,7 +84,7 @@ padding-top:10px;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s;
-  transform:${({isOpen}) => (isOpen ? `initial` : `rotate(180deg)`)};
+  transform:${({ isOpen }) => (isOpen ? `initial` : `rotate(180deg)`)};
   border: none;
   letter-spacing: inherit;
   color: inherit;
@@ -111,29 +106,33 @@ padding-top:10px;
       height:auto;
     }
     cursor:pointer;
-    transition: all 0.3s;
+    transition: all 0.4s;
     transform:${({ isOpen }) => (isOpen ?
     `scale(0.7)` : `scale(1.5)`)};
-  }
+    }
   h2{
-    
     display:${({ isOpen }) => (isOpen ?
     `block` : `none`)};
-    
-  }
-  .LinkContainer {
-    margin: 9px 0;
-    padding: 0 15%;
-    :hover{
-      background:${(props) => props.theme.bg3};
-
-
     }
 
+.LinkContainer{
+    margin: 8px 0;
+    padding: 0 15%;
+    :hover {
+      background: ${(props) => props.theme.bg3};
+    }
+    .Links{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      padding: calc(${v.smSpacing}-2px)
+    }
+    
+ 
   }
-}
-`
 
-
+`;
 export default SidebarMenu
+
+
 
