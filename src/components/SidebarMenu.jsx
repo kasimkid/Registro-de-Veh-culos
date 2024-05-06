@@ -27,7 +27,7 @@ export function SidebarMenu({ sidebarOpen, setSidebarOpen }) {
       </div>
       {linksArray.map(({ icon, label, to }) => (
         <div className="LinkContainer" key={label}>
-          <Link className="Links" to={to} >
+          <Link to={to} className="links" >
             <div className="Linkicon">
               {icon}
             </div>
@@ -121,11 +121,11 @@ padding-top: 20px;
     :hover {
       background: ${(props) => props.theme.bg3};
     }
-    .Links{
+    .links{
       display: flex;
       align-items: center;
       text-decoration: none;
-      padding: calc(${v.smSpacing}-2px)
+      padding: calc(${v.smSpacing}-10px)
     }
     
  
